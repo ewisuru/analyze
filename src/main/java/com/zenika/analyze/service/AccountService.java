@@ -17,7 +17,7 @@ public class AccountService {
 
     public List<Account> getAllAccounts() {
         List<Account> accounts = new ArrayList<Account>();
-        for(int i = 1; i <= accountRepository.count(); i++){
+        for(int i = 0; i < accountRepository.count(); i++){
             Optional<Account> byId = accountRepository.findById(i);
             accounts.add(byId.get());
         }
